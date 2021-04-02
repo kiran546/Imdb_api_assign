@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="main" style="text-align:center; width:60%; margin-left:20%;margin-right:20%;">
+    <h1 style="margin-top:10px;">Movie Title:{{ movieDetails.title}}</h1>
+    <h3>Summary:-</h3>
+    <p>{{movieDetails.description}}</p>
+    <p>
+        <span style="float: right"><strong>Release Date:-</strong>{{movieDetails.release_date}}</span>
+    </p>
+    <a href="{{ trailerUrl }}">click me</a>
+    <br>
+    <iframe width="100%" height="430" src="{{ trailerUrl }}">
+    </iframe>
+</div>
+{% endblock %}
